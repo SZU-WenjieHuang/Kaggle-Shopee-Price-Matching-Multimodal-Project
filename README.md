@@ -9,7 +9,7 @@
 ![image](https://user-images.githubusercontent.com/82434538/235440204-d1ba5aa5-ddc2-40ca-9487-62bc8fb2e939.png)
 
 - #### My Solution
-![image](https://user-images.githubusercontent.com/82434538/235440367-c6d55678-23a8-4ebf-8642-a5ebfebbfcb5.png)\
+![image](https://user-images.githubusercontent.com/82434538/235440367-c6d55678-23a8-4ebf-8642-a5ebfebbfcb5.png)
 
 ***Comparison:*** \
 Baseline ( TFIDF + ResNet18 + Result Splicing) : LB Score: 0.653 Top 80% \
