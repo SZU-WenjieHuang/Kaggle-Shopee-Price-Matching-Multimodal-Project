@@ -1,7 +1,7 @@
 ### Kaggle Shopee Price Matching Multimodal Project (2021.3-2021.5)
   ***Repository:*** [Solution for shopee-product-matching](https://github.com/SZU-WenjieHuang/Kaggle-Shopee-Price-Matching-Multimodal-Project)\
   ***Competition Website:*** [Kaggle Shopee Price Matching Multimodal Project](https://www.kaggle.com/competitions/shopee-product-matching)\
-  ***My Notebook Solition:*** [latest solution](https://www.kaggle.com/code/szuwenjiehuang/nfnet-l0-nfnetl1-efficientnet-b5-pred-02b5aa)\
+  ***My Notebook Solition:*** [latest version](https://www.kaggle.com/code/szuwenjiehuang/nfnet-l0-nfnetl1-efficientnet-b5-pred-02b5aa)\
   ***Dataset:*** [35000(Trianing set)+7000(Test set) products in Shopee with image / image_phash / title / id / label](https://www.kaggle.com/competitions/shopee-product-matching/data)\
   ***Description:*** Developed a model recommend similar products to customers through image and text model. (CV+NLP)Used multiple image and text models to train a significant amount of data. And a voting method for Post-processing.
   
