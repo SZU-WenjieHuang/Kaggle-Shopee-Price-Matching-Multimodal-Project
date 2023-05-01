@@ -6,8 +6,8 @@
   ***Description:*** Developed a model recommend similar products to customers through image and text model. (CV+NLP)Used multiple image and text models to train a significant amount of data. And a voting method for Post-processing.
   
 - #### [Datasets](https://www.kaggle.com/competitions/shopee-product-matching/data)
-![image](https://user-images.githubusercontent.com/82434538/235440204-d1ba5aa5-ddc2-40ca-9487-62bc8fb2e939.png)
- The dateset contains 34250 images in the training set and roughly 70,000 images in the hidden test set. And each item have several attributes:</p>
+  ![image](https://user-images.githubusercontent.com/82434538/235440204-d1ba5aa5-ddc2-40ca-9487-62bc8fb2e939.png)
+  The dateset contains 34250 images in the training set and roughly 70,000 images in the hidden test set. And each item have several attributes:</p>
    ***[train/test].csv***\
    ***posting_id:*** the ID code for the posting.\
    ***image:*** the image id/md5sum.\
@@ -18,7 +18,7 @@
    the images associated with the items.(34250/70000)
 
 - #### My Solution
-![image](https://user-images.githubusercontent.com/82434538/235440367-c6d55678-23a8-4ebf-8642-a5ebfebbfcb5.png)
+  ![image](https://user-images.githubusercontent.com/82434538/235440367-c6d55678-23a8-4ebf-8642-a5ebfebbfcb5.png)
 
 - ***Comparison:*** \
   ***Baseline*** ( TFIDF + ResNet18 + Result Splicing) : LB Score: 0.653 Top 80% \
@@ -35,8 +35,9 @@
   In a similar strategy to the textual part and image part, we trained the TF-IDF and BERT models on the same dataset and separately obtained predictions from these two models.\
   Possibly due to the absence of a voting scheme, incorporating the prediction results of BERT actually resulted in a decrease in the prediction accuracy. Therefore, in the latest version, we only utilized the training results of the TFIDF text model, which alone achieved a prediction accuracy of 59%.
 
-- #### Vote Prediction
-![image](https://user-images.githubusercontent.com/82434538/235440930-98d93a9b-dd93-4b02-ac85-b0c922341c83.png)
+- #### Vote Prediction (Top solution's Method)
+  ![image](https://user-images.githubusercontent.com/82434538/235440930-98d93a9b-dd93-4b02-ac85-b0c922341c83.png)
+  The Top Solution proposed an excellent model fusion method: each model individually computed KNN or cosine similarity and obtained predictions at different thresholds. Starting from the smallest threshold, the predictions of each model were evaluated. If 5 out of 7 models had positive predictions, the result was accepted. If only one item ID was predicted at a threshold, the threshold was expanded until it reached 0.5. This method was adopted because it was observed that a large number of prediction errors occurred when a label was associated with only one item. By gradually expanding the threshold, accuracy was ensured while avoiding the situation where one label corresponded to only one item.
 
 - ***Future Works:*** \
   After comparing with the winning kernel of the competition. The most serious deficiency of our kernel is post-processing and vote in prediction. According to the prediction results of the optimal LB score model in the early stage, we found that there are a large number of unmatched samples in the statistical results, that is, the matching results only match themselves, so we can reduce the matching standard (increase the matching distance threshold or reduce the similarity threshold).
