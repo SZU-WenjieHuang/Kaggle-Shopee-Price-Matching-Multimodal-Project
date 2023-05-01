@@ -10,7 +10,7 @@
   The dateset contains 34250 images in the training set and roughly 70,000 images in the hidden test set. And each item have several attributes:</p>
    ***[train/test].csv***\
    ***posting_id:*** the ID code for the posting.\
-   ***image:*** the image id/md5sum.\
+   ***image:*** the image id.\
    ***image_phash:*** a perceptual hash of the image.\
    ***title:*** the product description for the posting.\
    ***label_group:*** ID code for all postings that map to the same product. Not provided for the test set.</p>
