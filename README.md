@@ -20,13 +20,11 @@
 - #### My Solution
 ![image](https://user-images.githubusercontent.com/82434538/235440367-c6d55678-23a8-4ebf-8642-a5ebfebbfcb5.png)
 
-***Comparison:*** \
+- ***Comparison:*** \
   ***Baseline*** ( TFIDF + ResNet18 + Result Splicing) : LB Score: 0.653 Top 80% \
   ***My Solution (on graph)*** (Nfnet-l0 + TFIDF + Indonesian BERT + Multi-Modal(EfficientNet-B3 + EfficientNet-B5 + TFIDF) : LB Score: 0.732 Top 17% \
   ***My Latest Solution*** (Nfnet-l0 + Nfnet-l1 + TFIDF + Multi-Modal(EfficientNet-B5 + TFIDF)) : LB Score: 0.734 Top 11% \
   ***Top Solution*** (Nfnet-l0 + swin-small + EfficientNet-B0 + BERT + Indonesian-BERT + Multlingual-v1 + TFIDF) : LB Score:0.746 Top 1% </p>
-***Future Works:*** \
-  After comparing with the winning kernel of the competition. The most serious deficiency of our kernel is post-processing and vote in prediction. According to the prediction results of the optimal LB score model in the early stage, we found that there are a large number of unmatched samples in the statistical results, that is, the matching results only match themselves, so we can reduce the matching standard (increase the matching distance threshold or reduce the similarity threshold).
 
 
 - #### Image Part
@@ -41,6 +39,5 @@
 - #### Vote Prediction
 ![image](https://user-images.githubusercontent.com/82434538/235440930-98d93a9b-dd93-4b02-ac85-b0c922341c83.png)
 
-- #### Summary
-![image](https://user-images.githubusercontent.com/82434538/235441054-b8c76eee-aca8-47d8-abf9-96f623bb414c.png)
-
+- ***Future Works:*** \
+  After comparing with the winning kernel of the competition. The most serious deficiency of our kernel is post-processing and vote in prediction. According to the prediction results of the optimal LB score model in the early stage, we found that there are a large number of unmatched samples in the statistical results, that is, the matching results only match themselves, so we can reduce the matching standard (increase the matching distance threshold or reduce the similarity threshold).
