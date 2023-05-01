@@ -32,7 +32,6 @@
   In the latest version, we replaced EfficientNet B3 with Nfnet-L1. Nfnet-L0 and Nfnet-L1 were used to generate separate predictions, while EfficientNet B5 and TFIDF were combined to form a hybrid model for prediction. By using this approach, we obtained better prediction results compared to the previous versions.
 
 - #### Text Part
-  ![image](https://user-images.githubusercontent.com/82434538/235443356-ccd4629e-dd77-4e26-abeb-296bd6e0200e.png)
   In a similar strategy to the textual part and image part, we trained the TF-IDF and BERT models on the same dataset and separately obtained predictions from these two models.\
   Possibly due to the absence of a voting scheme, incorporating the prediction results of BERT actually resulted in a decrease in the prediction accuracy. Therefore, in the latest version, we only utilized the training results of the TFIDF text model, which alone achieved a prediction accuracy of 59%.
 
