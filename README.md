@@ -29,13 +29,11 @@
 
 
 - #### Image Part
-![image](https://user-images.githubusercontent.com/82434538/235440677-8aa26466-9355-4783-9010-b4e8c574680f.png)
+ In Image part I developed an ensemble model for multimodal fusion prediction, leveraging multiple deep learning models including EfficientNet B3, EfficientNet B5, and NFNet-L0. Each individual model was trained on the same dataset. The final prediction was obtained by combining the output of each model using an appropriate fusion strategy.
 
 - #### Text Part
-![image](https://user-images.githubusercontent.com/82434538/235440749-ddb8aaaa-1c7f-4658-bb41-98a45cb52027.png)
-
-- #### KNN Similarity
-![image](https://user-images.githubusercontent.com/82434538/235440865-df1c03db-2bff-46a7-a286-cd6286d900f1.png)
+![image](https://user-images.githubusercontent.com/82434538/235443356-ccd4629e-dd77-4e26-abeb-296bd6e0200e.png)
+In a similar strategy to the textual part and image part, we trained the TF-IDF and BERT models on the same dataset and separately obtained predictions from these two models.
 
 - #### Vote Prediction
 ![image](https://user-images.githubusercontent.com/82434538/235440930-98d93a9b-dd93-4b02-ac85-b0c922341c83.png)
